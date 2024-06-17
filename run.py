@@ -20,5 +20,16 @@ def typewriter(text):
         sys.stdout.write(char)
         sys.stdout.flush()
 
+def clear_terminal():
+    """ 
+    Clears the terminal for better user experience
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+def rules():
+    while True:
+        typewriter("Do you want to rea")
+
 
 
