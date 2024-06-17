@@ -114,7 +114,19 @@ def play():
         print(WINNER)
         #play_again 
 
-print(RULES)
+def main():
+    print("SPOOKY HANGMAN")
+    print("By Diana Strahilova")
+    print(LOGO)
+    typewriter("Welcome! Dare to enter the chilling world of SPOOKY HANGMAN?\n")
+    print("\n")
+    rules()
+    user_name()
+    play()
+
+main()
+    
+
 
 
 
