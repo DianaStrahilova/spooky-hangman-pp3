@@ -137,7 +137,6 @@ def main():
     rules()
     user_name()
     play()
-    play_again()
 
 main()
     
