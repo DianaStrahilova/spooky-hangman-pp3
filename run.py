@@ -10,3 +10,15 @@ from textart import BYE
 from hangman_stages import hangman_stages
 import os
 import string
+
+def typewriter(text):
+    """
+    Print statements with typewriter effect.
+    """
+    for char in text:
+        sleep(0.1)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+
+
+
