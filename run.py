@@ -106,13 +106,13 @@ def play():
         typewriter("The guy is dead ... the word was: ")
         typewriter(secret_word)
         print(GAME_OVER)
-        #play again?
+        play_again()
     else:
         typewriter("Awesome! You guessed the word: ")
         typewriter(secret_word)
         print('!')
         print(WINNER)
-        #play_again 
+        play_again()
 
 
 def play_again():
@@ -137,6 +137,7 @@ def main():
     rules()
     user_name()
     play()
+    play_again()
 
 main()
     
