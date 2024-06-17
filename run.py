@@ -33,7 +33,7 @@ def rules():
     """
     while True:
         typewriter("Do you want to read the game rules? (Y/N)")
-        answer = input.upper().strip()
+        answer = input().upper().strip()
         if answer == "Y":
             print(RULES)
             return True
@@ -42,6 +42,18 @@ def rules():
             break
         else:
             print("Invalid character. Please enter 'Y' or 'N'.")
+
+def user_name():
+    """
+    Function prompting the user to input their name.
+    """
+    user_name = input("Enter your name if you dare: ").strip()
+    if user_name == "":
+        user_name = "Joker"
+        clear_terminal()
+        typewriter((f"Howdy, {user_name}. Time to play :O!\n"))
+        print()
+
 
 
 
