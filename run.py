@@ -28,8 +28,22 @@ def clear_terminal():
 
 
 def rules():
+    """
+    Function to display the game rules if user chooses to.
+    """
     while True:
-        typewriter("Do you want to rea")
+        typewriter("Do you want to read the game rules? (Y/N)")
+        answer = input.upper().strip()
+        if answer == "Y":
+            print(RULES)
+            return True
+        elif answer == "N":
+            print("Let's play then!")
+            break
+        else:
+            print("Invalid character. Please enter 'Y' or 'N'.")
+
+
 
 
 
