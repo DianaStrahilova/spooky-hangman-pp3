@@ -2,7 +2,7 @@ import random
 import sys
 from time import sleep
 from words import words
-from textart import RULES
+from textart import print_rules
 from textart import LOGO
 from textart import GAME_OVER
 from textart import WINNER
@@ -35,7 +35,7 @@ def rules():
         typewriter("Do you want to read the game rules? (Y/N)")
         answer = input().upper().strip()
         if answer == "Y":
-            print(RULES)
+            print_rules()
             return True
         elif answer == "N":
             print("Let's play then!")

@@ -1,25 +1,26 @@
-RULES = """ 
-===============================================================================================
-|| ----------------------------------------------------------------------------------------- ||
-||                           ==========================                                      ||
-||                                   GAME RULES                                              ||
-||                           ==========================                                      ||
-||                                                                                           ||
-||     HOW TO PLAY:                                                                          ||
-||                                                                                           ||
-||       1. Objective: Guess the creepy hidden word, one letter at a time.                   ||
-||       2. Lives: You have a limited number of incorrect guesses before                     ||
-||       the spirit is lost.                                                                 ||
-||       3. Clues: Use the eerie underscores _ _ _ _ to see how many                         ||
-||       letters are in the word.                                                            ||
-||       4. Guessing: Each correct letter guessed will reveal its position  in the word.     ||
-||       5. Win: Complete the word before running out of guesses to win the game!            ||
-||       6. Lose: Run out of guesses and the spirit faces a spooky end!                      ||
-||                                                                                           ||
-||    GOOD LUCK!                                                                             ||
-||  ---------------------------------------------------------------------------------------  ||
-===============================================================================================
-"""
+def print_rules():
+       print("===============================================================================================")
+       print("|| ----------------------------------------------------------------------------------------- ||")
+       print("||                           ==========================                                      ||")
+       print("||                                   GAME RULES                                              ||")
+       print("||                           ==========================                                      ||")                                                                                   
+       print("||     HOW TO PLAY:                                                                          ||")                                                                                           
+       print("||       1. Objective: Guess the creepy hidden word, one letter at a time.                   ||")
+       print("||       2. Lives: You have a limited number of incorrect guesses before                     ||")
+       print("||       the spirit is lost.                                                                 ||")
+       print("||       3. Clues: Use the eerie underscores _ _ _ _ to see how many                         ||")
+       print("||       letters are in the word.                                                            ||")
+       print("||       4. Guessing: Each correct letter guessed will reveal its position  in the word.     ||")
+       print("||       5. Win: Complete the word before running out of guesses to win the game!            ||")
+       print("||       6. Lose: Run out of guesses and the spirit faces a spooky end!                      ||")
+       print("||                                                                                           ||")
+       print("||    GOOD LUCK!                                                                             ||")
+       print("||  ---------------------------------------------------------------------------------------  ||")
+       print("===============================================================================================")
+
+
+       
+
 
 LOGO =( """
                   .-.
