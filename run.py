@@ -50,9 +50,9 @@ def user_name():
     user_name = input("Enter your name if you dare:\n").strip()
     if user_name == "":
         user_name = "Joker"
-        clear_terminal()
-        typewriter((f"Howdy, {user_name}. Time to play :O!\n"))
-        print()
+    clear_terminal()
+    typewriter((f"Howdy, {user_name}. Time to play :O!\n"))
+    print()
 
 
 def get_word():
