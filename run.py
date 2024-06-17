@@ -55,6 +55,71 @@ def user_name():
         print()
 
 
+def get_word():
+    """
+    Function to pick a random word from the word list
+    """
+    word = random.choice(words)
+    return word.upper()
+
+
+def play():
+    """
+    Function to start and play the game.
+    """
+    secret_word = get_word()
+    secret_letters = set(secret_word)
+    alphabet = set(string.ascii_uppercase)
+    guessed_letters = set()
+    
+    lives = 6
+
+    while len(secret_letters) > 0 and lives > 0:
+        print("You have", lives, "lives left\n")
+        print("Guessed letters: ", ' '.join(guessed_letters))
+
+        word_list = [letter if letter in guessed_letters else '_' for letter in secret_word]
+        print(hangman_stages[lives])
+        print("Current word: ", ' '.join(word_list))
+        print()
+
+        user_guess = input("Guess a letter: ").upper()
+        if user_guess in alphabet - guessed_letters:
+            guessed_letters.add(user_guess)
+            if user_guess in secret_letters:
+                secret_letters.remove(user_guess)
+                print("")
+                clear_terminal()
+            else:
+                lives = lives - 1
+                print("\n Letter: ", user_guess, "is not in the word.")
+                clear_terminal()
+        elif user_guess in guessed_letters:
+            clear_terminal()
+            print("\nYou already guessed the letter", user_guess, ". Guess another one")
+        else:
+            clear_terminal()
+            print("Not a valid letter")
+    
+    if lives == 0:
+        print(hangman_stages[lives])
+        typewriter("The guy is dead ... the word was: ")
+        typewriter(secret_word)
+        print(GAME_OVER)
+        #play again?
+    else:
+        typewriter("Awesome! You guessed the word: ")
+        typewriter(secret_word)
+        print('!')
+        print(WINNER)
+        #play_again 
+
+play()
+
+
+
+
+
 
 
 
