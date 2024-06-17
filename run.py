@@ -114,6 +114,20 @@ def play():
         print(WINNER)
         #play_again 
 
+
+def play_again():
+    user_choice = input("Dare to play again? (Y/N)\n").strip().upper()
+    if user_choice == "N":
+        print("\nToo bad... May the HORROR stay with you! :(")
+        print(BYE)
+    elif user_choice == "Y":
+        print("Awesome! Let's play again!")
+        clear_terminal()
+        play()
+    else:
+        print("Invalid choice... please enter 'y' or 'n'.")
+        play_again()
+
 def main():
     print("SPOOKY HANGMAN")
     print("By Diana Strahilova")
