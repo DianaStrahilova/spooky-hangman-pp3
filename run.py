@@ -47,7 +47,7 @@ def user_name():
     """
     Function prompting the user to input their name.
     """
-    user_name = input("Enter your name if you dare: ").strip()
+    user_name = input("Enter your name if you dare:\n").strip()
     if user_name == "":
         user_name = "Joker"
         clear_terminal()
@@ -83,7 +83,7 @@ def play():
         print("Current word: ", ' '.join(word_list))
         print()
 
-        user_guess = input("Guess a letter: ").upper()
+        user_guess = input("Guess a letter:\n").upper()
         if user_guess in alphabet - guessed_letters:
             guessed_letters.add(user_guess)
             if user_guess in secret_letters:
@@ -114,7 +114,7 @@ def play():
         print(WINNER)
         #play_again 
 
-play()
+print(RULES)
 
 
 
