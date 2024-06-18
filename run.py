@@ -1,17 +1,40 @@
 import random
 import sys
+import pyfiglet
+from pyfiglet import figlet_format
+import termcolor
+from termcolor import colored
 from time import sleep
 from words import words
 from ascii_art import print_rules
 from hangman_stages import hangman_stages
 import os
 import string
-from ascii_art import game_over
-from ascii_art import logo
-from ascii_art import winner
-from ascii_art import bye
 
 
+
+def logo():
+       logo = pyfiglet.figlet_format("SPOOKY HANGMAN")
+       colored_logo = colored(logo, 'yellow')
+       print(colored_logo)
+
+
+def game_over():
+    game_over = pyfiglet.figlet_format("GAME OVER")
+    colored_game_over = colored(game_over, 'red')
+    print(colored_game_over)
+
+
+def winner():
+       you_win = pyfiglet.figlet_format("YOU WIN !")
+       colored_win = colored(you_win, 'green') 
+       print(colored_win)
+
+
+def bye():
+       bye = pyfiglet.figlet_format("BYE BYE")
+       colored_bye = colored(bye, 'blue')
+       print(colored_bye)
 
 
 
