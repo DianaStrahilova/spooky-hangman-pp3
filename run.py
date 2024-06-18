@@ -2,14 +2,19 @@ import random
 import sys
 from time import sleep
 from words import words
-from textart import print_rules
-from textart import LOGO
-from textart import GAME_OVER
-from textart import WINNER
-from textart import BYE
+from ascii_art import print_rules
 from hangman_stages import hangman_stages
 import os
 import string
+from ascii_art import game_over
+from ascii_art import logo
+from ascii_art import winner
+from ascii_art import bye
+
+
+
+
+
 
 def typewriter(text):
     """
@@ -36,6 +41,7 @@ def rules():
         answer = input().upper().strip()
         if answer == "Y":
             print_rules()
+            print("\n")
             return True
         elif answer == "N":
             print("Let's play then!")
@@ -47,7 +53,7 @@ def user_name():
     """
     Function prompting the user to input their name.
     """
-    user_name = input("Enter your name if you dare:\n").strip()
+    user_name = input("Enter your name if you dare: \n").strip()
     if user_name == "":
         user_name = "Joker"
     clear_terminal()
@@ -96,22 +102,23 @@ def play():
                 clear_terminal()
         elif user_guess in guessed_letters:
             clear_terminal()
-            print("\nYou already guessed the letter", user_guess, ". Guess another one")
+            print("\nYou already guessed the letter", user_guess, ". Guess another one.")
         else:
             clear_terminal()
             print("Not a valid letter")
     
     if lives == 0:
         print(hangman_stages[lives])
-        typewriter("The guy is dead ... the word was: ")
+        typewriter("Too bad... the word was: ")
         typewriter(secret_word)
-        print(GAME_OVER)
+        print("\n")
+        game_over()
         play_again()
     else:
         typewriter("Awesome! You guessed the word: ")
         typewriter(secret_word)
         print('!')
-        print(WINNER)
+        winner()
         play_again()
 
 
@@ -119,7 +126,7 @@ def play_again():
     user_choice = input("Dare to play again? (Y/N)\n").strip().upper()
     if user_choice == "N":
         print("\nToo bad... May the HORROR stay with you! :(")
-        print(BYE)
+        bye()
     elif user_choice == "Y":
         print("Awesome! Let's play again!")
         clear_terminal()
@@ -131,7 +138,7 @@ def play_again():
 def main():
     print("SPOOKY HANGMAN")
     print("By Diana Strahilova")
-    print(LOGO)
+    logo()
     typewriter("Welcome! Dare to enter the chilling world of SPOOKY HANGMAN?\n")
     print("\n")
     rules()
@@ -139,9 +146,11 @@ def main():
     play()
 
 main()
-    
-
-
+"""
+game_over()
+logo()
+winner()
+"""
 
 
 
