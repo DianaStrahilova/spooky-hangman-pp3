@@ -1,11 +1,14 @@
-"""
 import pyfiglet
 from pyfiglet import figlet_format
 import termcolor
 from termcolor import colored
-"""
+
+
 def print_rules():
-       print("===========================================================================")
+       """
+       Prints the game rules.
+       """
+       print("============================================================================")
        print("|| ---------------------------------------------------------------------  ||")
        print("||                         ==========================                     ||")
        print("||                                 GAME RULES                             ||")
@@ -24,3 +27,42 @@ def print_rules():
        print("||    GOOD LUCK!                                                          ||")
        print("||  ----------------------------------------------------------------------||")
        print("============================================================================")
+
+
+def logo():
+       """
+       Prints the game logo.
+       """
+       logo = figlet_format("SPOOKY HANGMAN")
+       colored_logo = colored(logo, 'yellow')
+       print(colored_logo)
+
+
+def game_over():
+     """
+     Prints game over banner
+     """
+     game_over = figlet_format("GAME OVER")
+     colored_game_over = colored(game_over, 'red')
+     print(colored_game_over)
+
+
+def winner():
+       """
+       Prints you win banner.
+       """
+       you_win = figlet_format("YOU WIN !")
+       colored_win = colored(you_win, 'green') 
+       print(colored_win)
+
+
+def bye():
+       """ 
+       Prints bye bye banner
+       """
+       bye = pyfiglet.figlet_format("BYE BYE")
+       colored_bye = colored(bye, 'blue')
+       print(colored_bye)
+
+
+

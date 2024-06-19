@@ -1,44 +1,15 @@
 import random
 import sys
-import pyfiglet
-from pyfiglet import figlet_format
-import termcolor
-from termcolor import colored
+import os
+import string
 from time import sleep
 from words import words
 from ascii_art import print_rules
+from ascii_art import logo
+from ascii_art import game_over
+from ascii_art import winner
+from ascii_art import bye
 from hangman_stages import hangman_stages
-import os
-import string
-
-
-
-def logo():
-       logo = figlet_format("SPOOKY HANGMAN")
-       colored_logo = colored(logo, 'yellow')
-       print(colored_logo)
-
-
-def game_over():
-    game_over = figlet_format("GAME OVER")
-    colored_game_over = colored(game_over, 'red')
-    print(colored_game_over)
-
-
-
-def winner():
-       you_win = figlet_format("YOU WIN !")
-       colored_win = colored(you_win, 'green') 
-       print(colored_win)
-
-
-
-def bye():
-       bye = pyfiglet.figlet_format("BYE BYE")
-       colored_bye = colored(bye, 'blue')
-       print(colored_bye)
-
-
 
 
 def typewriter(text):
@@ -46,13 +17,14 @@ def typewriter(text):
     Print statements with typewriter effect.
     """
     for char in text:
-        sleep(0.1)
+        sleep(0.05)
         sys.stdout.write(char)
         sys.stdout.flush()
 
+
 def clear_terminal():
     """ 
-    Clears the terminal for better user experience
+    Clears the terminal for better user experience.
     """
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -73,6 +45,7 @@ def rules():
             break
         else:
             print("Invalid character. Please enter 'Y' or 'N'.")
+
 
 def user_name():
     """
@@ -160,6 +133,7 @@ def play_again():
         print("Invalid choice... please enter 'y' or 'n'.")
         play_again()
 
+
 def main():
     print("SPOOKY HANGMAN")
     print("By Diana Strahilova")
@@ -170,7 +144,13 @@ def main():
     user_name()
     play()
 
+"""
+if __name__ == "main":
+    main()
+"""
 main()
+
+
 
 
 
