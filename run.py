@@ -1,8 +1,8 @@
 import random
 import sys
-#import pyfiglet
+import pyfiglet
 from pyfiglet import figlet_format
-#import termcolor
+import termcolor
 from termcolor import colored
 from time import sleep
 from words import words
@@ -25,10 +25,12 @@ def game_over():
     print(colored_game_over)
 
 
+
 def winner():
        you_win = figlet_format("YOU WIN !")
        colored_win = colored(you_win, 'green') 
        print(colored_win)
+
 
 
 def bye():
@@ -157,7 +159,7 @@ def play_again():
     else:
         print("Invalid choice... please enter 'y' or 'n'.")
         play_again()
-"""
+
 def main():
     print("SPOOKY HANGMAN")
     print("By Diana Strahilova")
@@ -169,10 +171,8 @@ def main():
     play()
 
 main()
-"""
-game_over()
-logo()
-winner()
+
+
 
 
 
