@@ -1,9 +1,16 @@
-import pyfiglet
-from pyfiglet import figlet_format
+
+# Import section
+
+# pyfiglet takes ASCII text and renders it in ASCII art fonts.
+import pyfiglet 
+#figlet_format method convert ASCII text into ASCII art fonts.
+from pyfiglet import figlet_format 
+# termcolor to change the colors
 import termcolor
 from termcolor import colored
 
 
+# Print rules
 def print_rules():
        """
        Prints the game rules.
@@ -29,37 +36,29 @@ def print_rules():
        print("============================================================================")
 
 
+# Prints logo
 def logo():
-       """
-       Prints the game logo.
-       """
        logo = figlet_format("SPOOKY HANGMAN")
        colored_logo = colored(logo, 'yellow')
        print(colored_logo)
 
 
+# Prints game over
 def game_over():
-     """
-     Prints game over banner
-     """
      game_over = figlet_format("GAME OVER")
      colored_game_over = colored(game_over, 'red')
      print(colored_game_over)
 
 
+# Prints you win
 def winner():
-       """
-       Prints you win banner.
-       """
        you_win = figlet_format("YOU WIN !")
        colored_win = colored(you_win, 'green') 
        print(colored_win)
 
 
+# Prints bye bye
 def bye():
-       """ 
-       Prints bye bye banner
-       """
        bye = pyfiglet.figlet_format("BYE BYE")
        colored_bye = colored(bye, 'blue')
        print(colored_bye)

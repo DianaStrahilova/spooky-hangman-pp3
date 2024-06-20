@@ -1,7 +1,7 @@
-"""
-The stages of hangman
-"""
+# Hangman stages
+
 hangman_stages = [
+# Game over
  r"""
   +---+
   |   |
@@ -11,7 +11,7 @@ hangman_stages = [
       |
 =========
 """,
-
+# Fifth incorrect guess
 r"""
   +---+
   |   |
@@ -21,7 +21,7 @@ r"""
       |
 =========
 """,
-
+# Fourth incorrect guess
 r"""
   +---+
   |   |
@@ -31,7 +31,7 @@ r"""
       |
 =========
 """,
-
+# Third incorrect guess
 r"""
   +---+
   |   |
@@ -41,6 +41,7 @@ r"""
       |
 =========
 """,
+# Second incorrect guess
 r"""
   +---+
   |   |
@@ -50,7 +51,7 @@ r"""
       |
 =========
 """,
-
+# First incorrect guess
 r"""
   +---+
   |   |
@@ -60,7 +61,7 @@ r"""
       |
 =========
 """,
-
+# Initial state
 r"""
   +---+
   |   |

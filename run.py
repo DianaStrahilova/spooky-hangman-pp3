@@ -1,3 +1,5 @@
+# Import section
+
 import random
 import sys
 import os
@@ -11,6 +13,8 @@ from ascii_art import winner
 from ascii_art import bye
 from hangman_stages import hangman_stages
 
+
+# Functions section
 
 def typewriter(text):
     """
@@ -31,7 +35,7 @@ def clear_terminal():
 
 def rules():
     """
-    Function to display the game rules if user chooses to.
+    Function to ask the user if they want to read the rules.
     """
     while True:
         typewriter("Do you want to read the game rules? (Y/N)")
@@ -71,22 +75,24 @@ def play():
     """
     Function to start and play the game.
     """
+
+    # Variables
     secret_word = get_word()
     secret_letters = set(secret_word)
     alphabet = set(string.ascii_uppercase)
     guessed_letters = set()
-    
     lives = 6
 
-    while len(secret_letters) > 0 and lives > 0:
+    while secret_letters and lives > 0:
+        # Print the number of lives and guesses.
         print("You have", lives, "lives left\n")
         print("Guessed letters: ", ' '.join(guessed_letters))
-
-        word_list = [letter if letter in guessed_letters else '_' for letter in secret_word]
+        # Print hangman and display the secret word.
+        hidden_letters = [letter if letter in guessed_letters else '_' for letter in secret_word]
         print(hangman_stages[lives])
-        print("Current word: ", ' '.join(word_list))
+        print("Current word: ", ' '.join(hidden_letters))
         print()
-
+        # An if statement to handle, check the users input
         user_guess = input("Guess a letter:\n").upper()
         if user_guess in alphabet - guessed_letters:
             guessed_letters.add(user_guess)
@@ -104,7 +110,7 @@ def play():
         else:
             clear_terminal()
             print("Not a valid letter")
-    
+    # Let user know they lost.
     if lives == 0:
         print(hangman_stages[lives])
         typewriter("Too bad... the word was: ")
@@ -112,6 +118,7 @@ def play():
         print("\n")
         game_over()
         play_again()
+    # Let user know they won.
     else:
         typewriter("Awesome! You guessed the word: ")
         typewriter(secret_word)
@@ -121,6 +128,9 @@ def play():
 
 
 def play_again():
+    """
+    Function to choose if the player wants to play or quit.
+    """
     user_choice = input("Dare to play again? (Y/N)\n").strip().upper()
     if user_choice == "N":
         print("\nToo bad... May the HORROR stay with you! :(")
@@ -135,6 +145,9 @@ def play_again():
 
 
 def main():
+    """
+    This function runs all the functions
+    """
     print("SPOOKY HANGMAN")
     print("By Diana Strahilova")
     logo()
@@ -144,11 +157,9 @@ def main():
     user_name()
     play()
 
-"""
-if __name__ == "main":
+
+if __name__ == "__main__":
     main()
-"""
-main()
 
 
 
