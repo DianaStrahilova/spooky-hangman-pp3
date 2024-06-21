@@ -122,29 +122,30 @@ This function was added to clear the terminal after player's each guess for bett
 
 
 
-   - Any input other than single letter will be considered invalid - will not result in loosing a life.
-   <img src="" height="432" width="720">
+- Any input other than single letter will be considered invalid - will not result in loosing a life.
+
+   <img src="./assets/readme-images/not-valid.png" height="432" width="720">
 
 
 ### Play Again:
 
 After the game, regardless of the outcome, a prompt will appear asking if they want to play again. The player can choose to keep playing or quit the game.
 
+<img src="./assets/readme-images/victory.png" height="432" width="720">
+
+<img src="./assets/readme-images/game-over.png" height="432" width="720">
+
 
 ## Testing 
 
 ### Validator Testing 
 
--------- img ------
-
-### Manual Testing
-
---------- img ------
+<img src="./assets/readme-images/validator.png" height="432" width="720">
 
 
 ### Bugs
 
-- The logo and game banners were initially a copy/paste IA generated textart. After deploying syntax errors were encountered and it did not look nice (it led to a lot of unnecessary commit messages, while trying to fix it). While trying to resolve this issue, I came across the pyfiglet module and  figlet_format geeksforgeeks. To fix this I installed pyfiglet, imported figlet_format, installed colorama and imported colored - defined the banners as functions and the issue was resolved.
+- The logo and game banners were initially a copy/paste IA generated ASCII art. After deploying syntax errors were encountered and it did not look nice (it led to a lot of unnecessary commit messages, while trying to fix it). While trying to resolve this issue, I came across the pyfiglet module and  figlet_format on geeksforgeeks. To fix this I installed pyfiglet, imported figlet_format, installed colorama and imported colored - defined the banners as functions and the issue was resolved.
 
 - The Hangman stages also appeared with syntax error after deployment which was resolved by adding a raw string.
 

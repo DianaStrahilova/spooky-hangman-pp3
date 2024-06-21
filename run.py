@@ -27,7 +27,7 @@ def typewriter(text):
 
 
 def clear_terminal():
-    """ 
+    """
     Clears the terminal for better user experience.
     """
     os.system("cls" if os.name == "nt" else "clear")
@@ -63,7 +63,7 @@ def user_name():
     print()
 
 
-def get_word():
+def get_word(words):
     """
     Function to pick a random word from the word list
     """
@@ -77,7 +77,7 @@ def play():
     """
 
     # Variables
-    secret_word = get_word()
+    secret_word = get_word(words)
     secret_letters = set(secret_word)
     alphabet = set(string.ascii_uppercase)
     guessed_letters = set()
@@ -87,11 +87,11 @@ def play():
         # Print the number of lives and guesses.
         print("You have", lives, "lives left\n")
         print("Guessed letters: ", ' '.join(guessed_letters))
-
-        # Print hangman and display the secret word.
-        hidden_letters = [letter if letter in guessed_letters else '_' for letter in secret_word]
+        # Print hangman and display the secret word with dashes.
+        word_puzzle = [letter if letter in guessed_letters
+                       else '_' for letter in secret_word]
         print(hangman_stages[lives])
-        print("Current word: ", ' '.join(hidden_letters))
+        print("Current word: ", ' '.join(word_puzzle))
         print()
         # An if statement to handle, check the users input
         user_guess = input("Guess a letter:\n").upper()
@@ -100,14 +100,15 @@ def play():
             if user_guess in secret_letters:
                 secret_letters.remove(user_guess)
                 clear_terminal()
-                print("Good job! The letter",user_guess,"is in the word!\n")
+                print(f"Good job! The letter {user_guess} is in the word!\n")
             else:
                 lives = lives - 1
                 clear_terminal()
-                print("Oh no... the letter",user_guess,"is not in the word.\n")
+                print(f"Oh no! The letter {user_guess} is not in the word!\n")
         elif user_guess in guessed_letters:
             clear_terminal()
-            print("You already guessed the letter", user_guess,". Guess another one.\n")
+            print(f"You already guessed the letter {user_guess}.")
+            print("Guess another one.")
         else:
             clear_terminal()
             print("Not a valid letter\n")
@@ -152,7 +153,8 @@ def main():
     print("SPOOKY HANGMAN")
     print("By Diana Strahilova")
     logo()
-    typewriter("Welcome! Dare to enter the chilling world of SPOOKY HANGMAN?\n")
+    typewriter("Welcome! Dare to enter the chilling world ")
+    typewriter("of SPOOKY HANGMAN?\n")
     print("\n")
     rules()
     user_name()
