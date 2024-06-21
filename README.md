@@ -108,8 +108,10 @@ This function was added to clear the terminal after player's each guess for bett
 
 
 ### Possible Outcomes:
-   - The letter is in the word
-   <img src="" height="432" width="720">
+- The letter is in the word
+
+   <img src="./assets/readme-images/letter-correct.png" height="432" width="720">
+
    - The letter is not in the word
    <img src="" height="432" width="720">
    - Already guessed - will not result in losing a life.
