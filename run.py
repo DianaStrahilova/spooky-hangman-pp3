@@ -98,15 +98,15 @@ def play():
             guessed_letters.add(user_guess)
             if user_guess in secret_letters:
                 secret_letters.remove(user_guess)
-                print("")
                 clear_terminal()
+                print("Awesome! The letter ",user_guess," is in the word!\n")
             else:
                 lives = lives - 1
                 print("\n Letter: ", user_guess, "is not in the word.")
                 clear_terminal()
         elif user_guess in guessed_letters:
             clear_terminal()
-            print("\nYou already guessed the letter", user_guess, ". Guess another one.")
+            print("You already guessed the letter", user_guess, ". Guess another one.\n")
         else:
             clear_terminal()
             print("Not a valid letter")
