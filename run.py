@@ -87,6 +87,7 @@ def play():
         # Print the number of lives and guesses.
         print("You have", lives, "lives left\n")
         print("Guessed letters: ", ' '.join(guessed_letters))
+
         # Print hangman and display the secret word.
         hidden_letters = [letter if letter in guessed_letters else '_' for letter in secret_word]
         print(hangman_stages[lives])
@@ -103,13 +104,13 @@ def play():
             else:
                 lives = lives - 1
                 clear_terminal()
-                print("Oh no... the letter ",user_guess," is not in the word.\n")
+                print("Oh no... the letter",user_guess,"is not in the word.\n")
         elif user_guess in guessed_letters:
             clear_terminal()
-            print("You already guessed the letter", user_guess, ". Guess another one.\n")
+            print("You already guessed the letter", user_guess,". Guess another one.\n")
         else:
             clear_terminal()
-            print("Not a valid letter")
+            print("Not a valid letter\n")
     # Let user know they lost.
     if lives == 0:
         print(hangman_stages[lives])

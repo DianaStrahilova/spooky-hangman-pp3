@@ -112,10 +112,16 @@ This function was added to clear the terminal after player's each guess for bett
 
    <img src="./assets/readme-images/letter-correct.png" height="432" width="720">
 
-   - The letter is not in the word
-   <img src="" height="432" width="720">
-   - Already guessed - will not result in losing a life.
-   <img src="" height="432" width="720">
+- The letter is not in the word
+
+   <img src="./assets/readme-images/not.png" height="30" width="350">
+
+- Already guessed - will not result in losing a life.
+
+   <img src="./assets/readme-images/guessed.png" height="432" width="720">
+
+
+
    - Any input other than single letter will be considered invalid - will not result in loosing a life.
    <img src="" height="432" width="720">
 
