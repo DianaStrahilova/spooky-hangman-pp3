@@ -84,7 +84,6 @@ def play():
     lives = 6
 
     while secret_letters and lives > 0:
-        # Print the number of lives and guesses.
         print("You have", lives, "lives left\n")
         print("Guessed letters: ", ' '.join(guessed_letters))
         # Print hangman and display the secret word with dashes.
@@ -93,7 +92,7 @@ def play():
         print(hangman_stages[lives])
         print("Current word: ", ' '.join(word_puzzle))
         print()
-        # An if statement to handle, check the users input
+        # An if statement to handle and check the users input
         user_guess = input("Guess a letter:\n").upper()
         if user_guess in alphabet - guessed_letters:
             guessed_letters.add(user_guess)

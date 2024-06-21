@@ -9,6 +9,8 @@ while also having fun.
 The word to guess is randomly  generated from a list of spooky words. The number of wrong guesses is limited to the
 number of stages it takes to draw the hangman figure. When the hangman figure is complete, the game ends. If the word is guessed before the figure "hangs", the player wins the game.
 
+- Live Website [HERE](https://spooky-hangman-b6ee3e9202ec.herokuapp.com/)
+
 
 ## Table of contents
 
@@ -61,7 +63,7 @@ To provide a simple and fun platform where the user can try their luck and have 
 
 ### Audience:
 
-Designed for anyone who likes to play games of chanceand looking for a  fun experience.
+Designed for anyone who likes to play games of chance and looking for a fun experience.
 
 ### Communication:
 
@@ -71,6 +73,8 @@ The game inteface provides clear print statements to guide the users through eac
 
 Make the game more challenging by adding multiple difficulty levels. Make it more appealing by adding more colors and audio.
 
+[Back to top](#table-of-contents)
+
 ## Design
      
    ### Flowchart
@@ -78,6 +82,7 @@ The flowchart depicts the flow of the game logic:
 
  ![](./assets/readme-images/flowchart.png)
 
+[Back to top](#table-of-contents)
 
 ## Features
 
@@ -114,7 +119,7 @@ This function was added to clear the terminal after player's each guess for bett
 
 - The letter is not in the word
 
-   <img src="./assets/readme-images/not.png" height="30" width="350">
+   <img src="./assets/readme-images/not.png" height="40" width="350">
 
 - Already guessed - will not result in losing a life.
 
@@ -135,17 +140,20 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
 
 <img src="./assets/readme-images/game-over.png" height="432" width="720">
 
+[Back to top](#table-of-contents)
 
 ## Testing 
 
 ### Validator Testing 
+- [CI PEP8 Online](https://pep8ci.herokuapp.com/).
+    - No errors were returned.
 
 <img src="./assets/readme-images/validator.png" height="432" width="720">
 
 
 ### Bugs
 
-- The logo and game banners were initially a copy/paste IA generated ASCII art. After deploying syntax errors were encountered and it did not look nice (it led to a lot of unnecessary commit messages, while trying to fix it). While trying to resolve this issue, I came across the pyfiglet module and  figlet_format on geeksforgeeks. To fix this I installed pyfiglet, imported figlet_format, installed colorama and imported colored - defined the banners as functions and the issue was resolved.
+- The logo and game banners were initially a copy/paste IA generated ASCII art. After deploying syntax errors were encountered and it did not look nice (it led to a lot of unnecessary commit messages, while trying to fix it). While trying to resolve this issue, I came across the pyfiglet module and  figlet_format on [GeeksforGeeks](https://www.geeksforgeeks.org/). To fix this I installed pyfiglet, imported figlet_format, installed colorama and imported colored - defined the banners as functions and the issue was resolved.
 
 - The Hangman stages also appeared with syntax error after deployment which was resolved by adding a raw string.
 
@@ -154,8 +162,10 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
 
 - No bugs remaining as far as I know.
 
+[Back to top](#table-of-contents)
 
 ## Technologies Used
+
 ### Main Langoage
 - Python
 
@@ -165,10 +175,14 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
 - [GitHub](https://github.com/) - to store the repository for submission.
 - [Draw.io](https://app.diagrams.net/) - to create the flowchart.
 - [Heroku](https://dashboard.heroku.com/apps) - to deploy the project.
-- [Am I Responsive](https://ui.dev/amiresponsive) - the preview image at the top of the README.md.
-- [Code Institute template](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python).
-- [Python Linter Validator](https://pep8ci.herokuapp.com/)
+- [Am I Responsive](https://ui.dev/amiresponsive) - for the preview image at the top of the README.md.
+- [Code Institute template](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python) for GitPod and this README.
+- [CI PEP8 Online](https://pep8ci.herokuapp.com/) according to the PEP 8 style guide for validating the Python code.
+- Random - to randomize the choices of the computer player.
+- Pyfiglet - to create the game banners.
+- Termcolor - to add colors to the banners.
 
+[Back to top](#table-of-contents)
 
 ## Deployment
    ### Version Control 
@@ -193,8 +207,10 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
    - Scroll down to "Deploy":
         - Option 1 is selectiong Automatic Deploys.
         - Option 2 is Manual Deploys, which was used for this project.
-   - Live deployment [Spooky Hangman](https://spooky-hangman-b6ee3e9202ec.herokuapp.com/)
+   
+   Live deployment [Spooky Hangman](https://spooky-hangman-b6ee3e9202ec.herokuapp.com/)
 
+[Back to top](#table-of-contents)
 
 ## Credits 
 
@@ -214,9 +230,13 @@ Also the following articles were consulted throughout the project:
 - [Set()Function](https://www.programiz.com/python-programming/methods/built-in/set) - to return the guessed letters.
 - [Pypi](https://pypi.org/project/termcolor/) - to isntall and learn how to use termcolor and colored.
 
+[Back to top](#table-of-contents)
+
 ## Acknowledgments
 
 A special a aknowledgment to my mentor Martina Terlevic - for her guidance, support and valuable advice.
+
+[Back to top](#table-of-contents)
 
 
 
