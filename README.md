@@ -9,14 +9,10 @@ while also having fun.
 The word to guess is randomly  generated from a list of spooky words. The number of wrong guesses is limited to the
 number of stages it takes to draw the hangman figure. When the hangman figure is complete, the game ends. If the word is guessed before the figure "hangs", the player wins the game.
 
-- Live Website [HERE](https://spooky-hangman-b6ee3e9202ec.herokuapp.com/)
+- Live Website [Spooky Hangman](https://spooky-hangman-b6ee3e9202ec.herokuapp.com/)
 
 
 ## Table of contents
-
-
-
-
 
 - [UX](#UX)
    - [Site Purpose](#site-purpose)
@@ -40,16 +36,10 @@ number of stages it takes to draw the hangman figure. When the hangman figure is
 - [Technologies Used](#technologies-used)
    - [Main Language](#main-langoage)
    - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
-[Deployment](#deployment)
+- [Deployment](#deployment)
    - [Version Control](#version-control)
    - [Page Deployment](#page-deployment)
 - [Credits](#credits)
-
-
-
-
-
-
 
 
 
@@ -92,20 +82,20 @@ The flowchart depicts the flow of the game logic:
 
 The landing game displays the game's title, logo, and the developer's name. To add visual appeal the logo is colored in yellow. The greeting lines are animated using the typewriter function, aiming for better user experience.
 
-Game Rules
+### Game Rules:
 
 Players are presented with the choice to read the game rules before starting the game. They can do so by typing "Y" or 'N". If any other input is provided, an invalid choice message will display until providing the correct input.
 
 <img src="./assets/readme-images/rules.png" height="432" width="720"> 
 
-### Enter username
+### Enter username:
 
 Beneath the rules section, the player is invited to input their name or play as Joker.
 
 <img src="./assets/readme-images/name.png" height="30" width="350">
 
 
-### Clear terminal 
+### Clear terminal:
 
 This function was added to clear the terminal after player's each guess for better visual experience.
 
@@ -228,7 +218,7 @@ Also the following articles were consulted throughout the project:
 - [Stack Overflow](https://stackoverflow.com/questions/20302331/typing-effect-in-python) - to learn  how to create typewriter effect to the text. 
    - And [Clear Terminal](https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python) - how to clear the terminal.
 - [Set()Function](https://www.programiz.com/python-programming/methods/built-in/set) - to return the guessed letters.
-- [Pypi](https://pypi.org/project/termcolor/) - to isntall and learn how to use termcolor and colored.
+- [Pypi](https://pypi.org/project/termcolor/) - how to use termcolor and colored.
 
 [Back to top](#table-of-contents)
 
