@@ -27,10 +27,10 @@ number of stages it takes to draw the hangman figure. When the hangman figure is
    - [Enter Username](#enter-username)
    - [Clear terminal](#clear-terminal)
    - [Possible Outcomes](#possible-outcomes) 
-   - [Another Round?](#play-again)
+   - [Another Round](#play-again)
 - [Testing](#testing)
    - [Validator Testing](#validator-testing)
-   - [Manual Testting](#manual-testing)
+   - [Manual Testing](#manual-testing)
    - [Bugs](#bugs)
    - [Remaining Bugs](#remaining-bugs)
 - [Technologies Used](#technologies-used)
@@ -68,7 +68,8 @@ Make the game more challenging by adding multiple difficulty levels. Make it mor
 ## Design
      
    ### Flowchart
-The flowchart depicts the flow of the game logic:
+
+  - The flowchart depicts the flow of the game logic:
 
  ![](./assets/readme-images/flowchart.png)
 
@@ -84,30 +85,30 @@ The landing game displays the game's title, logo, and the developer's name. To a
 
 ### Game Rules:
 
-Players are presented with the choice to read the game rules before starting the game. They can do so by typing "Y" or 'N". If any other input is provided, an invalid choice message will display until providing the correct input.
+- Players are presented with the choice to read the game rules before starting the game. They can do so by typing "Y" or 'N". If any other input is provided, an invalid choice message will display until providing the correct input.
 
 <img src="./assets/readme-images/rules.png" height="432" width="720"> 
 
 ### Enter username:
 
-Beneath the rules section, the player is invited to input their name or play as Joker.
+- Beneath the rules section, the player is invited to input their name or play as Joker.
 
 <img src="./assets/readme-images/name.png" height="30" width="350">
 
 
 ### Clear terminal:
 
-This function was added to clear the terminal after player's each guess for better visual experience.
+- This function was added to clear the terminal after player's each guess for better visual experience.
 
 <img src="./assets/readme-images/clear.png" height="432" width="720">
 
 
 ### Possible Outcomes:
-- The letter is in the word
+- The letter is in the word.
 
    <img src="./assets/readme-images/letter-correct.png" height="432" width="720">
 
-- The letter is not in the word
+- The letter is not in the word.
 
    <img src="./assets/readme-images/not.png" height="40" width="350">
 
@@ -124,7 +125,7 @@ This function was added to clear the terminal after player's each guess for bett
 
 ### Play Again:
 
-After the game, regardless of the outcome, a prompt will appear asking if they want to play again. The player can choose to keep playing or quit the game.
+- After the game, regardless of the outcome, a prompt will appear asking if they want to play again. The player can choose to keep playing or quit the game.
 
 <img src="./assets/readme-images/victory.png" height="432" width="720">
 
@@ -156,7 +157,7 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
 
 ## Technologies Used
 
-### Main Langoage
+### Main Language
 - Python
 
 ### Frameworks, Libraries and Programs
@@ -178,7 +179,7 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
    ### Version Control 
 
    The version control was maintained using git within GitPod VS Code workspace and push code to main repository.
-   - From the VS Code terminal type "git add .", to make changes/upadates to the files.
+   - From the VS Code terminal type "git add .", to make changes/updates to the files.
    - Type "git commit -m (insert a short message)", which commits the changes and updates the files.
    - Use "git push" command to push the commited changes to the main repository.
 
@@ -195,7 +196,7 @@ After the game, regardless of the outcome, a prompt will appear asking if they w
    - Scroll down to Deployment Method and select GitHub.
    - Select the repository to be deployed and connect to Heroku.
    - Scroll down to "Deploy":
-        - Option 1 is selectiong Automatic Deploys.
+        - Option 1 is selecting Automatic Deploys.
         - Option 2 is Manual Deploys, which was used for this project.
    
    Live deployment [Spooky Hangman](https://spooky-hangman-b6ee3e9202ec.herokuapp.com/)
@@ -222,9 +223,9 @@ Also the following articles were consulted throughout the project:
 
 [Back to top](#table-of-contents)
 
-## Acknowledgments
+## Acknowledgements
 
-A special a aknowledgment to my mentor Martina Terlevic - for her guidance, support and valuable advice.
+A special a aknowledgement to my mentor Martina Terlevic - for her guidance, support and valuable advice.
 
 [Back to top](#table-of-contents)
 
